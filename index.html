@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+    <title>Blog Entry</title>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="card">
+        <h2>What do you want to blog?</h2>
+        <form method="POST" id="blog-entry-form">
+          <div class="input-group">
+            <label for="blog-title">Title</label>
+            <input type="text" name="blog-title" id="blog-title" placeholder="" />
+          </div>
+          <div class="input-group">
+            <label for="user-name">Username</label>
+            <input type="text" name="user-name" id="user-name" placeholder="" />
+          </div>
+          <div class="input-group">
+            <label for="blog-content">Content</label>
+            <input type="text" name="blog-content" id="blog-content" placeholder="" />
+          </div>
+          <button id="blog-entry-button">Submit</button>
+        </form>
+      </div>
+    </div>
+    <section id="blog-entries"></section>
+
+    <script src="./assets/js/blog.js"></script>
+  </body>
+</html>
