@@ -1,0 +1,159 @@
+/* Declaring variables */
+:root {
+    --ube: #8878c3;;
+    --text: #fff;
+    --purple: #9f00ff;
+  }
+  
+/* Element Selectors */
+
+body { /* Setting the standard font, margin, background color and text color*/
+    font-family: Lato, Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(66, 66, 66);
+    color: #fff;
+}
+
+a { /* Removing decoration from all links*/
+    text-decoration: none;
+}
+
+nav a { /* Setting the decoration, spacing and alignment for the links in the nav blocks */
+    padding-left: 50px;    
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-flex;
+}
+
+nav a:hover, a:active { /* Setting the psuedo classes for hover and active effects on nav links */
+    background-color: black;
+    color: #fff;
+}
+
+/* header, footer {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #228b22;
+    width: 100%;
+    } */
+
+article a{ /* Setting the color and display for anchor tags in article blocks */
+    color: #fff;
+    display:block;
+}
+
+/* Class Selectors */
+
+.projects { /* Setting the alignment, flex type and margins for the projects class */
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin: 20px 0px;
+}
+
+.featured-project-card, .project-card { /* Setting the common position, margin, padding, borders, alignment and transition for featured-project-card and project-card classes */
+    position: relative;
+    top: 0;
+    align-content: center;
+    transition: top ease 0.7s;
+    border-style: solid;
+    border-width: 10px;
+    padding: 25px;
+    margin: 20px;
+}
+
+.featured-project-card { /* Setting specific width, height and border color for the featured-project-card class */
+    width: 100%;
+    height: 450px;
+    border-color: var(--purple);
+}
+
+.project-card { /* Setting specific width, height and border color for the project-card class */
+    width: 25%;
+    height: 300px;
+    border-color: var(--ube);
+}
+
+.featured-project-card h1, .project-card h1 { /* Setting the common positioning and alignment of h1 tags in both the featured-project-card and project-card classes. The color will only be used for featured.project.card */
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--purple);
+    }
+
+.project-card h1 { /* Overwriting the color specifically for the h1 tag in project.card */
+    background-color: var(--ube);
+    }
+
+.featured-project-card p, .project-card p { /* Setting the padding and alignment for p tags in the featured-project-card and project-card classes. */
+    padding: 20px;
+    text-align: center;
+    }
+
+.featured-project-card:hover { /* Setting hover effect for the featured-project-card class. */
+    box-shadow: inset 0 0 5px 5px var(--purple), 0 0 5px 5px var(--purple);
+    top: -10px;
+    }
+
+.project-card:hover { /* Setting hover effect for the project-card class. */
+    box-shadow: inset 0 0 5px 5px var(--ube), 0 0 5px 5px var(--ube);
+    top: -10px;
+    }
+
+.blogArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: var(--ube);
+}
+
+.blogArticle h1 { /* Overwriting the color specifically for the h1 tag in project.card */
+    font-size: 30px;
+}
+
+.blogArticle p { /* Overwriting the color specifically for the h1 tag in project.card */
+    padding: 20px 30px 20px 30px;
+    align-self: center;
+}
+
+.blogArticle footer {
+    display: block;
+    align-self: flex-end;
+}
+
+/* Setting the responsiveness to different viewports. There's a slight difference between the featured-project-card and project-card classes */
+
+@media screen and (max-width: 992px) {
+    .projects {
+        flex-wrap: wrap;
+    }
+    
+    .project-card {
+      width: 45%;
+        }
+    }
+  
+@media screen and (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .featured-project-card {
+        max-height: 300px;
+        width: 95%
+    }
+
+    .project-card {
+        width: 95%;
+          }
+    }

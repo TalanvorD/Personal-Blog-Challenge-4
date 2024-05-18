@@ -9,46 +9,52 @@ const blogEntries = [];
 let blogEntriesRecall = [];
 
 function renderBlogEntries() { // Shows the blog entries on the page
-    //blogEntriesList.textContent = ''; // sets the blogEntryList to empty
+    blogEntriesSection.textContent = ''; // sets the blog-entries section to empty to prepare for rendering
     console.clear();
     for (let i = 0; i < blogEntriesRecall.length; i++) { // Iterates through the blogEntries array
         let currentBlogTitle = blogEntriesRecall[i].blogTitle; // Storing each array item locally for rendering to the page
         let currentBlogUserName = blogEntriesRecall[i].userName;
         let currentBlogContent = blogEntriesRecall[i].blogContent;
+        let currentBlogDate = blogEntriesRecall[i].datePosted;
   
       console.log(`Title: ${currentBlogTitle}`);
       console.log(`Username: ${currentBlogUserName}`);
       console.log(`Title: ${currentBlogContent}`);
-  
-      let blogSpanTitle = document.createElement('header'); // Creates a header for each title
-      blogSpanTitle.textContent = currentBlogTitle;
-      blogSpanTitle.setAttribute('data-index', i); // Sets the dataset to data-index to match the array index
-      blogEntriesSection.appendChild(blogSpanTitle);
 
-      let blogSpanUserName = document.createElement('h2'); // Creates a subheaderfor each username
-      blogSpanUserName.textContent = currentBlogUserName;
-      blogSpanUserName.setAttribute('data-index', i); // Sets the dataset to data-index to match the array index
-      blogEntriesSection.appendChild(blogSpanUserName);
-
-      let blogSpanContent = document.createElement('article'); // Creates a span for each array item
-      blogSpanContent.textContent = currentBlogContent;
-      blogSpanContent.setAttribute('data-index', i); // Sets the dataset to data-index to match the array index
-      blogEntriesSection.appendChild(blogSpanContent);
+      const blogArticle = document.createElement("article"); // Creates an article to hold the blog entry
+      blogArticle.setAttribute("data-index", i); // Sets the dataset of the article to data-index to match the array index
+      blogArticle.setAttribute("class", "blogArticle"); // Sets the dataset of the article to data-index to match the array index
   
-      const removeButton = document.createElement('button'); // Makes the remove button
-      removeButton.textContent = 'Delete ❌'; // The text context of the button
-      blogEntriesSection.appendChild(removeButton); // Appends the button to the blog-entries span
+      const blogArticleTitle = document.createElement('h1'); // Creates a header for each title
+      blogArticleTitle.textContent = currentBlogTitle;
+      blogArticle.appendChild(blogArticleTitle);
+
+      const blogArticleContent = document.createElement('p'); // Creates paragraph for the blog content
+      blogArticleContent.textContent = currentBlogContent; // Inserts the blog content text into paragraph
+      blogArticle.appendChild(blogArticleContent); // Appends the paragraph to the article
+
+      const blogArticleUserName = document.createElement('footer'); // Creates a subheader for each username
+      blogArticleUserName.textContent = (`Posted by: ${currentBlogUserName} on ${currentBlogDate}`);
+      blogArticle.appendChild(blogArticleUserName);
+  
+      //const deleteButton = document.createElement('button'); // Makes the delete button
+      //deleteButton.textContent = 'Delete ❌'; // The text context of the button
+      //blogArticle.appendChild(removeButton); // Appends the button to the entry article
+
+      blogEntriesSection.appendChild(blogArticle); // Appends the entire blog entry article to the blog-entries section
     }
-  }
+};
 
 submitEntry.addEventListener('submit', function (event) {
   event.preventDefault();
+  const dateString = new Date().toLocaleDateString();
   
     // Creates the object from the form input
     const blogEntry = {
     blogTitle: blogTitleInput.value,
     userName: userNameInput.value,
-    blogContent: blogContentInput.value
+    blogContent: blogContentInput.value,
+    datePosted: dateString
 };
 
     blogEntries.push(blogEntry);
