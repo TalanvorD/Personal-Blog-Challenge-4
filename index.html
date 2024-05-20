@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/resets.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
 
-    <title>Blog something!</title>
-  </head>
-  <body>
-    <header>
-        <h1>What's going on?</h1>🌚🌞
-        <nav><a href="blog.html" id="blog-view-button">View entries</a>
-        </nav>
-      </header>
-        <form method="POST" id="blog-entry-form">
-          <div class="input-group">
-            <label for="blog-title">Title</label>
-            <input type="text" name="blog-title" id="blog-title" placeholder="" />
-          </div>
-          <div class="input-group">
-            <label for="user-name">Author</label>
-            <input type="text" name="user-name" id="user-name" placeholder="" />
-          </div>
-          <div class="input-group">
-            <label for="blog-content">Content</label>
-            <input type="text" name="blog-content" id="blog-content" placeholder="" />
-          </div>
-          <button class="blog-entry-button" id="blog-entry-button" value="submit">Post to your blog!</button>
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/resets.css" />
+  <link rel="stylesheet" type="text/css" id="modeSelectCSS" href="./assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
 
-    <!-- Contact Me -->
-    <footer class="contact-me">
-        <nav>
-          <a href="mailto:talanvor_divine@yahoo.com" title="Email me!">My email</a>
-          <a href="https://talanvord.github.io/Homework-2-May-9th/" title="Here's my portfolio!">My portfolio</a>
-          <a href="https://github.com/TalanvorD" title="Here's my github!">My Github</a>
-        </nav>
-    </footer>  
-    <script src="./assets/js/form.js"></script>
+  <title>Blog something!</title>
+</head>
+
+<body>
+  <header>
+    <h1>Blog it here!</h1>
+    <label id="modeToggle">
+      <input type="checkbox" name="modeToggle">
+      <span id="lightModeSelect" style="display: none;">🌞</span><span id="darkModeSelect">🌚</span>
+    </label>
+    <nav><a href="./blog.html" id="blog-view-button">View entries</a>
+    </nav>
+  </header>
+  <form method="POST" id="blog-entry-form">
+      <label for="blog-title">Title</label>
+      <input type="text" name="blog-title" id="blog-title" required/>
+      <label for="user-name">Username</label>
+      <input type="text" name="user-name" id="user-name" required/>
+      <label for="blog-content">Content</label>
+      <input type="text" name="blog-content" id="blog-content" required/>
+    <button class="blog-button" id="blog-button" value="submit">Post to your blog!</button>
+  </form>
+
+  <!-- Contact Me -->
+  <footer class="contact-me">
+    <nav>
+      <a href="mailto:talanvor_divine@yahoo.com" title="Email me!">My email</a>
+      <a href="https://talanvord.github.io/Homework-2-May-9th/" title="Here's my portfolio!">My portfolio</a>
+      <a href="https://github.com/TalanvorD" title="Here's my github!">My Github</a>
+    </nav>
+  </footer>
+  <script src="./assets/js/form.js"></script>
+  <script src="./assets/js/logic.js"></script>
 </body>
+
 </html>
