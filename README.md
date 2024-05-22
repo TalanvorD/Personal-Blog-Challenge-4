@@ -62,3 +62,9 @@ that input into an array of objects which is stored in localStorage for persista
     - A string in local stored is created to reflect the current status, default is dark.
     - Toggle added to both pages that enables the change and flips the preference.
     - Status is read on page load for both pages to the preference persists between pages.
+
+ - Added a delete button, just for fun.
+
+![Personal Blog screenshot 1](https://github.com/TalanvorD/Personal-Blog-Challenge-4/assets/164896317/bfafb159-eee9-451e-9620-ce43ffc323b6)
+
+![Personal Blog screenshot 2](https://github.com/TalanvorD/Personal-Blog-Challenge-4/assets/164896317/bfe30d1d-8b59-4f85-8d36-0da9b44d8584)
