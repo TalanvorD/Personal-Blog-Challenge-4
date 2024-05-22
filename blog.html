@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="./assets/css/resets.css" />
   <link rel="stylesheet" type="text/css" id="modeSelectCSS" href="./assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/blog.css" />
 
   <title>Blog Entries</title>
 </head>
@@ -13,14 +14,16 @@
 <body>
   <header>
     <h1>Read it here!</h1>
-    <label id="modeToggle">
+    <label id="modeToggle"> <!-- Light/Dark mode toggle -->
       <input type="checkbox" name="modeToggle">
       <span id="lightModeSelect" style="display: none;">🌞</span><span id="darkModeSelect">🌚</span>
     </label>
     <nav><a href="index.html" id="blog-entry-button">Write new entry</a>
     </nav>
   </header>
-  <section class="blog-entries" id="blog-entries"></section> <!-- Section for the blog articles to be rendered to -->
+  <section class="blog-entries" id="blog-entries"> <!-- Section for the blog articles to be rendered to -->
+    <article><h1 class="blogArticle" id="default-empty-message">There's nothing to read here. Go write something!</h1></article></section>
+  </section>
 
   <!-- Contact Me footer -->
   <footer class="contact-me">

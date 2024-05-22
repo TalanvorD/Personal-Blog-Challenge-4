@@ -12,22 +12,23 @@
 </head>
 
 <body>
+  <main>
   <header>
     <h1>Blog it here!</h1>
     <label id="modeToggle">
-      <input type="checkbox" name="modeToggle">
+      <input type="checkbox" name="modeToggle"> <!-- Light/Dark mode toggle -->
       <span id="lightModeSelect" style="display: none;">🌞</span><span id="darkModeSelect">🌚</span>
     </label>
     <nav><a href="./blog.html" id="blog-view-button">View entries</a>
     </nav>
   </header>
-  <form method="POST" id="blog-entry-form">
+  <form method="POST" id="blog-entry-form"> <!-- Form to submit blog entries -->
       <label for="blog-title">Title</label>
-      <input type="text" name="blog-title" id="blog-title" required/>
+      <input type="text" name="blog-title" id="blog-title" />
       <label for="user-name">Username</label>
-      <input type="text" name="user-name" id="user-name" required/>
+      <input type="text" name="user-name" id="user-name" />
       <label for="blog-content">Content</label>
-      <input type="text" name="blog-content" id="blog-content" required/>
+      <textarea name="blog-content" id="blog-content"></textarea>
     <button class="blog-button" id="blog-button" value="submit">Post to your blog!</button>
   </form>
 
@@ -39,6 +40,7 @@
       <a href="https://github.com/TalanvorD" title="Here's my github!">My Github</a>
     </nav>
   </footer>
+</main>
   <script src="./assets/js/form.js"></script>
   <script src="./assets/js/logic.js"></script>
 </body>

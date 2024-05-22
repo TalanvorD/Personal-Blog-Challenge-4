@@ -13,7 +13,7 @@ function init() { // Checks for a stored array of objects in local storage and i
 
 submitEntry.addEventListener('submit', function (event) { // Listens for a submit even from the blog entry form
   event.preventDefault(); // Stops the page from refreshing on submit
-  if (blogTitleInput == "" || userNameInput == "" || blogContentInput == ""){
+  if (blogTitleInput.value === "" || userNameInput.value === "" || blogContentInput.value === ""){ // Checks for empty fields
     alert("Please fill in all fields before continuing.");
     return;
   } else {  

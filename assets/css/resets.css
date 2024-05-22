@@ -7,7 +7,7 @@
   
   /* Setting a parent height for the body to compare to */
   html {
-    height: 100%;
+    min-height: 100%;
   }
   
   body { /* Baseline heigh, line height and font family */

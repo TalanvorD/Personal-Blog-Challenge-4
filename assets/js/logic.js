@@ -16,7 +16,7 @@ function init() { // Runs on page load, retrieves the current mode selection fro
     }
 };
 
-modeToggle.addEventListener("change", () => { // Changes the 
+modeToggle.addEventListener("change", () => { // Swaps the style sheet depending on light or dark is selected
   if (modeSelect == "dark") {
     modeSelect = "light";
     document.getElementById("lightModeSelect").style.display = 'inline-block';
